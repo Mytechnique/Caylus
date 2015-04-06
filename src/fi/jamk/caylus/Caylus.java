@@ -2,7 +2,7 @@ package fi.jamk.caylus;
 
 /* 
 
-MORO REISCA 
+MORO REISCA WITTU
 
 */
 
