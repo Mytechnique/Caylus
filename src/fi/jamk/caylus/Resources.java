@@ -69,17 +69,39 @@ public class Resources {
     public void subAut(int i) {
         this.aut = aut - i;
     }
-    
+
+    public int getMoney() {
+        return money;
+    }
+
+    public int getFood() {
+        return food;
+    }
+
+    public int getWood() {
+        return wood;
+    }
+
+    public int getStone() {
+        return stone;
+    }
+
+    public int getSilk() {
+        return silk;
+    }
+
+    public int getRep() {
+        return rep;
+    }
+
+    public int getAut() {
+        return aut;
+    }
+  
     public int getGold(){
-        return this.gold;
-    }
-    public String moneyInfo(){
-        return "You this much money " + this.money; 
+        return gold;
     }
     
-    public String goldInfo(){
-        return "" + this.gold;
-    }
     public String resourcesInfo(){
         return "Money: " + this.money + "Food: " + this.food + "Wood: " + this.wood + "Stone: " + 
                 this.stone + "Silk: " + this.silk + "Gold: " + this.gold + "Reputation: " + this.rep 
