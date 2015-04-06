@@ -1,5 +1,10 @@
 package fi.jamk.caylus;
 
+/* 
+
+MORO REISCA WITTU
+
+*/
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -19,15 +24,14 @@ public class Caylus extends Canvas implements Runnable {
     private boolean running = false;
     private Thread thread;
     
-    public Spot b = new Spot();
-    
     private Handler handler;
-          
+    
+    
     public Caylus(){
-       new Window(WIDTH, HEIGHT, "Caylus", this);
-       
-       handler = new Handler();
+       Window game = new Window(WIDTH, HEIGHT, "Caylus", this);
+       game.addPanel(500,500,500,500);
     }
+    
     
     public synchronized void start(){
         if(running)
@@ -115,7 +119,10 @@ public class Caylus extends Canvas implements Runnable {
     public static void main (String args[]){
       new Caylus();
       
-      
+      DefBuild d = new DefBuild();
+      Player player1 = new Player("Hessu");
+      player1.subGold(d.defGoldMine());
+      player1.playerInfo();
       
     }
 

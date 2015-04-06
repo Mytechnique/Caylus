@@ -5,6 +5,7 @@ import java.awt.Dimension;
 import javax.swing.ImageIcon;
 
 import javax.swing.JFrame;
+import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
 /** 
@@ -14,17 +15,19 @@ import javax.swing.JPanel;
 
 public class Window extends Canvas {
     
-    
+      JFrame frame = new JFrame("Caylus");
+      JLayeredPane boardi = new JLayeredPane();
+      JPanel panel = new JPanel();
+      JPanel pan = new JPanel();
+      JPanel d = new JPanel();
     ImageIcon board = new ImageIcon("C:\\Users\\Mythe\\Documents\\NetBeansProjects\\Caylus\\Caylus_board.png");
     ImageIcon apina = new ImageIcon("C:\\Users\\Mythe\\Documents\\NetBeansProjects\\Caylus\\apina.jpg");
     
     
     public Window(int width, int height, String title, Caylus game)
     {
-        JPanel panel = new JPanel();
-        JPanel pan = new JPanel();
-          JPanel d = new JPanel();
-        JFrame frame = new JFrame(title);
+      
+        boardi.add
         
         frame.add(pan);
         frame.add(d);
@@ -67,5 +70,15 @@ public class Window extends Canvas {
         frame.setVisible(true);
           
         game.start();   
+    }
+    
+    public void addPanel(int x,int y,int w, int h){
+       JPanel j = new JPanel();
+       panel.add(j);
+       Spot g = new Spot();
+       j.setBounds(x,y,w,h);
+       j.add(g);
+       g.setIcon(apina);
+       j.setVisible(true);
     }
 }
