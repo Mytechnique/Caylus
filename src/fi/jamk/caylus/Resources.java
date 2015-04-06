@@ -70,8 +70,15 @@ public class Resources {
         this.aut = aut - i;
     }
     
+    public int getGold(){
+        return this.gold;
+    }
     public String moneyInfo(){
         return "You this much money " + this.money; 
+    }
+    
+    public String goldInfo(){
+        return "" + this.gold;
     }
     public String resourcesInfo(){
         return "Money: " + this.money + "Food: " + this.food + "Wood: " + this.wood + "Stone: " + 
